@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #d8f3dc);
+    font-family: Arial, sans-serif;
+    touch-action: none;
+}
+
+
+/* Spielfeld */
+
+#game {
+
+    width: 100vw;
+    height: 75vh;
+    max-width: 900px;
+
+    margin: auto;
+
+    background:
+    linear-gradient(45deg,
+    #74c365 25%,
+    #80d46b 25%,
+    #80d46b 50%,
+    #74c365 50%);
+
+    background-size: 60px 60px;
+
+    border: 5px solid #333;
+    border-radius: 25px;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+/* obere Anzeige */
+
+#topbar {
+
+    position:absolute;
+
+    top:10px;
+    left:10px;
+    right:10px;
+
+    display:flex;
+    justify-content:space-between;
+
+    z-index:20;
+
+}
+
+
+#score,
+#lives {
+
+    background:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:22px;
+
+    box-shadow:0 3px 8px #555;
+
+}
+
+
+
+/* Staubsauger */
+
+#player {
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    background:#3498db;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+    box-shadow:
+    0 5px 10px #333;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:35px;
+
+}
+
+
+
+/* Müll */
+
+.trash {
+
+    position:absolute;
+
+    width:35px;
+    height:35px;
+
+    background:#8d5524;
+
+    border-radius:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+}
+
+
+
+/* Katzen */
+
+.cat {
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    background:#444;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    box-shadow:0 4px 8px #333;
+
+}
+
+
+
+/* Todesscreen */
+
+#gameOver {
+
+    display:none;
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.75);
+
+    z-index:50;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+#deathBox {
+
+    background:white;
+
+    color:#222;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 30px black;
+
+}
+
+
+
+#deathBox h1 {
+
+    font-size:32px;
+
+}
+
+
+
+button {
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:20px;
+
+    font-size:20px;
+
+    background:#3498db;
+
+    color:white;
+
+}
+
+
+
+/* Joystick */
+
+
+#joystick {
+
+    width:150px;
+
+    height:150px;
+
+    background:rgba(255,255,255,0.4);
+
+    border-radius:50%;
+
+    margin:20px auto;
+
+    position:relative;
+
+    touch-action:none;
+
+}
+
+
+
+#stick {
+
+    width:60px;
+
+    height:60px;
+
+    background:#555;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    left:45px;
+
+    top:45px;
+
+}
